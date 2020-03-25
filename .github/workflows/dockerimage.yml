@@ -1,0 +1,13 @@
+on: [push]
+
+jobs:
+  windup_job:
+    runs-on: ubuntu-latest
+    name: RHAMT
+    steps:
+      - uses: actions/checkout@v2
+      - name: Hello world action step
+        uses: ./ # Uses an action in the root directory
+        id: hello
+        with:
+          target: 'eap7'
