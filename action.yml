@@ -1,16 +1,16 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'RHAMT Action'
+description: 'Executes RHAMT and analyze your code for migrations'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  target:
+    description: 'The target technology for the application migration. See the --target argument description.'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  additional-command-line-arguments:
+    description: 'Additional RHAMT Command-line Arguments.'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.target }}
+    - ${{ inputs.additional-command-line-arguments }}
