@@ -1,14 +1,13 @@
 #!/bin/sh -l
-
-outputFolder=$HOME/rhamt-report
+output=${GITHUB_WORKSPACE}.report
 
 $WINDUP_HOME/bin/rhamt-cli --target $1 \
 --input $GITHUB_WORKSPACE \
---output $reportOutputFolder \
+--output $output \
 $2
 
-
-tar -czvf report.tgz $outputFolder
+tar -czvf report.tgz $output
+ls -l
 
 report=$GITHUB_WORKSPACE/report.tgz
 echo "::set-output name=report::$report"
