@@ -15,6 +15,9 @@ jobs:
       - shell: bash
         run: |
           ls -l
+      - shell: bash
+        run: |
+          ls -p .. | grep '/$'
       - name: Get the output time
         run: echo "The time was ${{ steps.rhamt.outputs.report }}"
       - name: Upload report
