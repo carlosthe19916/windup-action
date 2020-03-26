@@ -6,10 +6,7 @@ $WINDUP_HOME/bin/rhamt-cli --target $1 \
 --output $output \
 $2
 
-tar -czvf report.tgz $output
-ls -l
+tar -czvf rhamt-report.tgz $output
 
-report=$GITHUB_WORKSPACE/report.tgz
+report=$GITHUB_WORKSPACE/rhamt-report.tgz
 echo "::set-output name=report::$report"
-
-mv report.tgz $report
