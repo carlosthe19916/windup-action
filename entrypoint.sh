@@ -10,6 +10,7 @@ ls -l $GITHUB_WORKSPACE
 
 echo "----------------------------"
 whoami
+echo "----------------------------"
 
 echo "HOME=$HOME"
 ls -ld $HOME
