@@ -2,5 +2,5 @@
 
 $WINDUP_HOME/bin/rhamt-cli --target $1 \
 --input $GITHUB_WORKSPACE \
---output $GITHUB_WORKSPACE/rhamt \
+--output $HOME/rhamt \
 $2
