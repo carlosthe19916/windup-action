@@ -6,12 +6,32 @@ jobs:
     name: RHAMT
     steps:
       - uses: actions/checkout@v2
+      - shell: bash
+        run: |
+          expr 3 + 7 > math-homework.txt
+      - shell: bash
+        run: |
+          pwd
+      - shell: bash
+        run: |
+          ls -l
+      - name: Upload math result for job 1
+        uses: actions/upload-artifact@v1
+        with:
+          name: homework
+          path: math-homework.txt
       - id: rhamt
         name: RHAMT
         uses: ./ # Uses an action in the root directory
         with:
           target: 'eap7'
           additional-command-line-arguments: '--sourceMode'
+      - shell: bash
+        run: |
+          ls -l
+      - shell: bash
+        run: |
+          ls -l ${{ $GITHUB_WORKSPACE }}
       - name: Get the output time
         run: echo "The time was ${{ steps.rhamt.outputs.output_folder }}"
       - name: list RHAMT

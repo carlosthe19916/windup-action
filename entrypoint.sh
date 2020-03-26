@@ -7,3 +7,6 @@ $WINDUP_HOME/bin/rhamt-cli --target $1 \
 --input $GITHUB_WORKSPACE \
 --output $output_folder \
 $2
+
+tar -czvf report.tgz $output_folder
+# mv report.tgz
