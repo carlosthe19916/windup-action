@@ -29,9 +29,11 @@ jobs:
       - shell: bash
         run: |
           ls -l
+      - name: Set env
+        run: echo ::set-env name=workspace::$GITHUB_WORKSPACE
       - shell: bash
         run: |
-          ls -l ${{ GITHUB_WORKSPACE }}
+          ls -l ${{ env.workspace }}
       - name: Get the output time
         run: echo "The time was ${{ steps.rhamt.outputs.output_folder }}"
       - name: list RHAMT
