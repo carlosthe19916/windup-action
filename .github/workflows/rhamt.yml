@@ -6,8 +6,9 @@ jobs:
     name: RHAMT
     steps:
       - uses: actions/checkout@v2
-      - name: Hello world action step
+      - name: RHAMT
         uses: ./ # Uses an action in the root directory
-        id: hello
+        id: rhamt
         with:
           target: 'eap7'
+          additional-command-line-arguments: '--sourceMode'
