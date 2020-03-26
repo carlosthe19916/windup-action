@@ -12,6 +12,8 @@ jobs:
         with:
           target: 'eap7'
           additional-command-line-arguments: '--sourceMode'
+      - name: Get the output time
+        run: echo "The time was ${{ steps.rhamt.outputs.output_folder }}"
       - name: list RHAMT
         run: ls -l ${{ steps.rhamt.outputs.output_folder }}
       - name: Prepare report
