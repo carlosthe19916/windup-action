@@ -30,10 +30,10 @@ jobs:
         run: |
           ls -l
       - name: Set env
-        run: echo ::set-env name=workspace::$GITHUB_WORKSPACE
+        run: echo ::set-env name=myhome::$HOME
       - shell: bash
         run: |
-          ls -l ${{ env.workspace }}
+          ls -l ${{ env.myhome }}
       - name: Get the output time
         run: echo "The time was ${{ steps.rhamt.outputs.output_folder }}"
       - name: list RHAMT

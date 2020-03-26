@@ -10,3 +10,5 @@ $2
 
 tar -czvf report.tgz $output_folder
 # mv report.tgz
+
+expr 3 + 7 > $GITHUB_WORKSPACE/acaaaaaaaa.txt
