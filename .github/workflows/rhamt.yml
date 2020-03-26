@@ -6,9 +6,20 @@ jobs:
     name: RHAMT
     steps:
       - uses: actions/checkout@v2
-      - name: RHAMT
+      - id: rhamt
+        name: RHAMT
         uses: ./ # Uses an action in the root directory
-        id: rhamt
         with:
           target: 'eap7'
           additional-command-line-arguments: '--sourceMode'
+      - name: list RHAMT
+        run: ls -l ${{ steps.rhamt.outputs.output_folder }}
+      - name: Prepare report
+        shell: bash
+        run: tar -czvf report.tgz ${{ steps.rhamt.outputs.output_folder }}
+      - name: Upload report
+        uses: actions/upload-artifact@v1
+        with:
+          name: report.tgz
+          path: 'report.tgz'
+

@@ -8,6 +8,9 @@ inputs:
   additional-command-line-arguments:
     description: 'Additional RHAMT Command-line Arguments.'
     required: false
+outputs:
+  output_folder:
+    description: 'The output generated from RHAMT'
 runs:
   using: 'docker'
   image: 'Dockerfile'
