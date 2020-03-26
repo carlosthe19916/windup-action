@@ -8,5 +8,5 @@ $2
 
 tar -czvf rhamt.tgz $output
 
-report=$GITHUB_WORKSPACE/rhamt.tgz
+report=rhamt.tgz
 echo "::set-output name=report::$report"
