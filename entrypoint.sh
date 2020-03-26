@@ -8,12 +8,13 @@ echo "----------------------------"
 echo "GITHUB_WORKSPACE=$GITHUB_WORKSPACE"
 ls -l $GITHUB_WORKSPACE
 
-mkdir $HOME/rhamt
 echo "----------------------------"
+whoami
+
 echo "HOME=$HOME"
-ls -l $HOME
+ls -ld $HOME
 
 $WINDUP_HOME/bin/rhamt-cli --target $1 \
 --input $GITHUB_WORKSPACE \
---output $HOME/rhamt \
+--output $HOME \
 $2
