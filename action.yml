@@ -9,7 +9,7 @@ inputs:
     description: 'Additional RHAMT Command-line Arguments.'
     required: false
 outputs:
-  output_folder:
+  report:
     description: 'The output generated from RHAMT'
 runs:
   using: 'docker'
