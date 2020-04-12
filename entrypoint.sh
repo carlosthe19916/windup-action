@@ -3,12 +3,12 @@
 target=$1
 
 defaultInput=$GITHUB_WORKSPACE
-input=VAR1="${$2:-$defaultInput}"
+input=VAR1="${2:-$defaultInput}"
 
 defaultOutput=${GITHUB_WORKSPACE}.report
-output=VAR1="${$3:-$defaultOutput}"
+output=VAR1="${3:-$defaultOutput}"
 
-sourceMode="${$4:-true}"
+sourceMode="${4:-true}"
 
 additionalCommandLineArguments=$4
 
