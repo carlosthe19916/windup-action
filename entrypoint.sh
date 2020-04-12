@@ -8,7 +8,7 @@ input="${2:-$defaultInput}"
 defaultOutput=${GITHUB_WORKSPACE}.report
 output="${3:-$defaultOutput}"
 
-additionalCommandLineArguments="${4:- --sourceMode}"
+additionalCommandLineArguments=$4
 
 # Execute RHAMT Analysis
 $WINDUP_HOME/bin/rhamt-cli --target $target \
