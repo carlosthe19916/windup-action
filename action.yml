@@ -1,6 +1,9 @@
 # action.yml
 name: 'RHAMT Action'
 description: 'Executes RHAMT and analyze your code for migrations'
+branding:
+  icon: 'check'
+  color: 'red'
 inputs:
   target:
     description: 'The target technology for the application migration. See the --target argument description.'
