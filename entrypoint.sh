@@ -16,6 +16,6 @@ $WINDUP_HOME/bin/rhamt-cli --target $target \
 --output "$output" \
 "$additionalCommandLineArguments"
 
-tar -czvf rhamt.tgz -C $output
+tar -czvf rhamt.tgz -C $output rhamt
 report=rhamt.tgz
 echo "::set-output name=report::$report"
