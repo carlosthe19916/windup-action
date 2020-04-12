@@ -3,17 +3,17 @@
 target=$1
 
 defaultInput=$GITHUB_WORKSPACE
-input=VAR1="${2:-$defaultInput}"
+input="${2:-$defaultInput}"
 
 defaultOutput=${GITHUB_WORKSPACE}.report
-output=VAR1="${3:-$defaultOutput}"
+output="${3:-$defaultOutput}"
 
 additionalCommandLineArguments=$4
 
 # Execute RHAMT Analysis
 $WINDUP_HOME/bin/rhamt-cli --target $target \
---input $input \
---output $output \
+--input "$input" \
+--output "$output" \
 "$additionalCommandLineArguments"
 
 tar -czvf rhamt.tgz $output
