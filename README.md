@@ -12,7 +12,7 @@ inside your `.github/workflows/workflow.yml` file:
 ```yaml
 steps:
 - uses: actions/checkout@master
-- uses: carlosthe19916/windup-action@v1
+- uses: carlosthe19916/windup-action@v2
   id: rhamt
   with:
     target: eap7
@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: carlosthe19916/windup-action@v1
+    - uses: carlosthe19916/windup-action@v2
       id: rhamt
       with:
         target: eap7
