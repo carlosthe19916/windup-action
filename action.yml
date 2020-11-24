@@ -1,12 +1,12 @@
 # action.yml
-name: 'RHAMT Action'
-description: 'Executes RHAMT and analyze your code for migrations'
+name: 'Migration Toolkit for Applications - Action'
+description: 'Executes Migration Toolkit for Applications (MTA) and analyze your code for migrations.'
 branding:
   icon: 'check'
   color: 'red'
 inputs:
   target:
-    description: 'The target technology for the application migration. See the --target argument description.'
+    description: 'The target technology for the application migration.'
     required: true
   input:
     description: 'A space-delimited list of the path to the file or directory containing one or more applications to be analyzed. This argument is required.'
