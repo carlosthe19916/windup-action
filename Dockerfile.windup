@@ -1,0 +1,19 @@
+FROM jboss/base-jdk:8
+
+ENV MTA_VERSION 5.0.1.Final
+ENV WINDUP_HOME /opt/jboss/windup
+
+USER root
+
+RUN cd $HOME \
+    && curl -O https://repo1.maven.org/maven2/org/jboss/windup/mta-cli/$MTA_VERSION/mta-cli-$MTA_VERSION-offline.zip \
+    && unzip mta-cli-$MTA_VERSION-offline.zip \
+    && mv $HOME/mta-cli-$MTA_VERSION $WINDUP_HOME \
+    && rm mta-cli-$MTA_VERSION-offline.zip \
+    && chown -R jboss:0 ${WINDUP_HOME} \
+    && chmod -R g+rw ${WINDUP_HOME}
+
+# Set the default command to run on boot
+# This will boot the Windup CLI
+CMD ["/opt/jboss/windup/bin/rhamt-cli"]
+
