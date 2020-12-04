@@ -1,4 +1,4 @@
-FROM quay.io/carlosthe19916/windup-action:master
+FROM quay.io/carlosthe19916/windup-action:5.1.0.Final
 
 ENV WINDUP_HOME /opt/jboss/windup
 
