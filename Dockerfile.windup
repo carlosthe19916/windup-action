@@ -1,6 +1,6 @@
 FROM jboss/base-jdk:8
 
-ENV MTA_VERSION 5.1.0.Beta1
+ENV MTA_VERSION 5.1.0.Final
 ENV WINDUP_HOME /opt/jboss/windup
 
 USER root
